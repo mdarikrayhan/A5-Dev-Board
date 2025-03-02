@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind v4 cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-bgColor: #3752fd;
+        --color-textColor: #00303c;
+        --font-Poppins: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body id="body" class="bg-slate-200 font-Poppins">
+    <!-- container -->
+    <div class="container m-2 max-w-[1500px] mx-auto space-y-5">
+      <head>
+        <nav
+          class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm"
+        >
+          <!-- logo part -->
+          <div class="flex items-center space-x-1">
+            <img src="assets/logo.png" alt="" />
+            <h3 class="text-textColor text-4xl">
+              Dev<span class="font-bold">Board</span>
+            </h3>
+          </div>
+
+          <!-- button part -->
+          <div class="flex items-center gap-x-12">
+            <!-- button 1 -->
+            <button
+              class="text-3xl flex gap-3 items-center rounded-[30px] font-bold py-3 px-5 bg-sky-100 w-28"
+            >
+              <img class="object-contain" src="assets/checkbox.png" alt="" />
+              <span id="completed-task">23</span>
+            </button>
+            <!-- button 2 -->
+            <button
+              class="p-2 rounded-xl bg-sky-100 cursor-pointer"
+              id="theme-btn"
+            >
+              <img src="assets/theme-btn.png" alt="" />
+            </button>
+          </div>
+        </nav>
+      </head>
+
+      <!-- main section -->
+      <main class="grid grid-cols-4 gap-5">
+        <!-- left content -->
+        <section class="col-span-3 rounded-xl bg-white">
+          <!-- top section  -->
+          <section
+            class="grid grid-cols-4 gap-5 p-4 border-b-2 border-gray-300 border-dashed"
+          >
+            <!-- task assign part -->
+            <div
+              class="col-span-1 flex justify-center items-center gap-4 py-4 bg-blue-50 rounded-xl"
+            >
+              <img class="object-scale-down" src="assets/checkbox.png" alt="" />
+              <div>
+                <p class="text-gray-500 font-medium">Task Assigned</p>
+                <h4
+                  id="remaining-task"
+                  class="text-3xl text-textColor font-bold"
+                >
+                  05
+                </h4>
+              </div>
+            </div>
+            <!-- go to blog page part -->
+            <div
+              id="traversing-blogPage"
+              class="cursor-pointer col-span-2 flex items-center justify-center gap-4 rounded-xl py-4 bg-gradient-to-r from-bgColor to-blue-400"
+            >
+              <img src="assets/board.png" alt="" />
+              <h1 class="font-medium text-2xl text-slate-100">
+                Discover Something New Today!
+              </h1>
+            </div>
+            <!-- today's date  -->
+            <div
+              class="col-span-1 flex justify-center items-center gap-4 py-4 bg-blue-50 rounded-xl"
+            >
+              <img class="object-scale-down" src="assets/calender.png" alt="" />
+              <h4 id="today's-date" class="text-xl font-semibold">
+                Wed, Feb 12 2025
+              </h4>
+            </div>
+          </section>
+          <!-- all carts container -->
+          <section class="grid grid-cols-3 gap-5 p-4">
+            <!-- cart 1 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">ShopEase</button>
+                <h2 class="text-2xl font-bold text-textColor">
+                  Fix Mobile Button Issue
+                </h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Fix the mobile button issue by optimizing responsiveness and
+                  improving...
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">21 March 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- cart 2 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">CloudSync</button>
+                <h2 class="text-2xl font-bold text-textColor">Add Dark Mode</h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Store the user's preference in localStorage, update CSS
+                  variables...
+                  <!-- dynamically and apply a. smooth transition effect. -->
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">25 March 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- cart 3 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">SwiftPay</button>
+                <h2 class="text-2xl font-bold text-textColor">
+                  Optimize Home page 
+                </h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Debug using Chrome DevTools, check for overlapping elements,
+                  and...
+                  <!-- ensure onClick works properly and ensure onClick works properly -->
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">30 March 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- cart 4 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">Meta</button>
+                <h2 class="text-2xl font-bold text-textColor">
+                  Add new emoji 🤲
+                </h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Meta can introduce the 🤲 emoji for richer expression and user
+                  engagement...
+                  <!-- ensure onClick works properly and ensure onClick works properly -->
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">01 April 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- cart 5 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">
+                  Google LLC
+                </button>
+                <h2 class="text-2xl font-bold text-textColor">
+                  Integrate OpenAI API
+                </h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Google LLC can integrate OpenAI API for enhanced AI-powered
+                  services and...
+                  <!-- automation. -->
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">05 April 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+            <!-- cart 6 -->
+            <div class="p-6 bg-blue-50 space-y-4 rounded-lg shadow-md">
+              <div
+                class="border-b-2 border-gray-300 border-dashed py-4 space-y-5"
+              >
+                <button class="px-3 py-1 bg-white rounded-lg">Glassdoar</button>
+                <h2 class="cart-title text-2xl font-bold text-textColor">
+                  Improve Job searching
+                </h2>
+                <p
+                  class="text-gray-400 bg-white font-medium py-3 px-2 rounded-lg"
+                >
+                  Improve job searching with better filters, faster results, and
+                  personalized...
+                  <!-- recommendations -->
+                </p>
+              </div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p class="text-textColor font-medium">10 April 2025</p>
+                </div>
+                <button
+                  class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer shadow-md transition hover:bg-blue-800 active:scale-95 completed-btn"
+                >
+                  Completed
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- aside section -->
+        <aside class="col-span-1 rounded-xl bg-white space-y-6">
+          <!-- history nav -->
+          <div
+            class="text-center space-y-4 border-b-2 border-dashed border-gray-300 py-4"
+          >
+            <div class="flex items-center justify-center gap-4">
+              <img class="object-scale-down" src="assets/activity.png" alt="" />
+              <p class="font-medium text-lg text-textColor">Activity log</p>
+            </div>
+            <button
+              id="clear-history"
+              class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer transition hover:bg-blue-800 active:scale-95"
+            >
+              Clear History
+            </button>
+          </div>
+
+          <!-- all history item -->
+          <div id="history-container" class="p-6 space-y-5">
+            <!-- history item -->
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

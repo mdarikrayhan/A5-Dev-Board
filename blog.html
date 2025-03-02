@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind v4 cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-bgColor: #3752fd;
+        --color-textColor: #00303c;
+        --font-Poppins: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-200 font-Poppins">
+    <div class="container m-2 max-w-[1500px] mx-auto space-y-5">
+      <head>
+        <nav
+          class="flex justify-between items-center p-4 shadow-sm bg-white rounded-xl"
+        >
+          <!-- logo part -->
+          <div class="flex items-center space-x-1">
+            <img src="assets/logo.png" alt="" />
+            <h3 class="text-textColor text-4xl">
+              Dev<span class="font-bold">Board</span>
+            </h3>
+          </div>
+
+          <!-- button part -->
+          <div class="flex items-center gap-x-12">
+            <!-- button  -->
+            <button
+              id="back-homePage"
+              class="bg-bgColor rounded-lg py-2 px-5 font-semibold text-white text-lg cursor-pointer transition hover:bg-blue-800 active:scale-95 completed-btn"
+            >
+              Back to Desk
+            </button>
+          </div>
+        </nav>
+      </head>
+
+      <main>
+        <h1 class="text-center text-4xl font-bold text-textColor mb-6">
+          Blogs
+        </h1>
+        <!-- question section  -->
+        <section class="space-y-5">
+          <!-- question 1 -->
+          <section class="bg-white rounded-md">
+            <div class="border-b border-dashed border-gray-300">
+              <h3 class="text-2xl font-bold text-textColor p-5">
+                Question-1: What are the different ways to select an element in
+                the DOM?
+              </h3>
+            </div>
+            <p class="text-lg font-medium text-gray-400 p-5">
+              There are five different ways to select an element in the DOM.
+              <br />
+              Like --> <br />
+              1. using getElementById(). <br />
+              2. using getElementsByClassName() <br />
+              3. using getElementsByTagName() <br />
+              4. using querySelector() <br />
+              5. and Finally using querySelectorAll()
+            </p>
+          </section>
+          <!-- question 2-->
+          <section class="bg-white rounded-md">
+            <div class="border-b border-dashed border-gray-300">
+              <h3 class="text-2xl font-bold text-textColor p-5">
+                Question-2: What is the difference between innerHTML, innerText,
+                and textContent ?
+              </h3>
+            </div>
+            <p class="text-lg font-medium text-gray-400 p-5">
+              The difference among innerHTML, innerText and textContent is
+              <br />
+              <br />
+              1. innerHTML: <br />
+              innerHTML returns both HTML murkup and text content of an element.
+              <br />
+              <br />
+              2. innerText: <br />
+              innerText only returns text content of an element without html tag
+              and the text content is what we see on screen. <br />
+              <br />
+              3. textContent: <br />
+              textContent only returns text content of an element without html
+              tag but the text content is what is written in hard code. <br />
+              It means all disappear's content is also returned
+            </p>
+          </section>
+          <!-- question 3-->
+          <section class="bg-white rounded-md">
+            <div class="border-b border-dashed border-gray-300">
+              <h3 class="text-2xl font-bold text-textColor p-5">
+                Question-3: What is event delegation in the DOM?
+              </h3>
+            </div>
+            <p class="text-lg font-medium text-gray-400 p-5">
+              Event delegation is the process to stop spreading the event
+              upwards from the targeted event <br />
+              and also stop spreading around the targeted event.
+            </p>
+          </section>
+          <!-- question 4-->
+          <section class="bg-white rounded-md">
+            <div class="border-b border-dashed border-gray-300">
+              <h3 class="text-2xl font-bold text-textColor p-5">
+                Question-4: What is event bubbling in the DOM?
+              </h3>
+            </div>
+            <p class="text-lg font-medium text-gray-400 p-5">
+              Event bubbling is the process of spreading the event upwards from
+              the targeted event.
+            </p>
+          </section>
+          <!-- question 5-->
+          <section class="bg-white rounded-md">
+            <div class="border-b border-dashed border-gray-300">
+              <h3 class="text-2xl font-bold text-textColor p-5">
+                Question-5: How do you create, add, and remove elements using
+                JavaScript?
+              </h3>
+            </div>
+            <p class="text-lg font-medium text-gray-400 p-5">
+              1. using document.createElement(), we can create any kinds of html
+              element. <br /><br />
+              2. using append, appendChild and so on methods, we can add any
+              kinds of html element inside or outside in others element.
+              <br /><br />
+              3. using removeChild method, we can delete any kinds of html
+              element.
+            </p>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const backHomePage = document.getElementById("back-homePage");
+      backHomePage.addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
